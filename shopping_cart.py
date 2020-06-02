@@ -85,10 +85,10 @@ for selected_id in selected_ids:
 def sales_taxes(total_price):
     #print(sales_tax)
     sales_taxes = 1.09 * total_price
-    return taxes
+    return sales_taxes
 
 print("TOTAL PRICE:" + '${0:.2f}'.format(total_price))
-print("sales_tax: 1.09 * total_price")
+print("sales_tax: 1.0875 * total_price")
 print("Thank you for shopping here today")
 
 
