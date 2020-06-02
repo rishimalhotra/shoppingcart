@@ -23,22 +23,26 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
+#
 # info capture/ input
+#
 
 selected_id = input("Please input a proudct identifier: ") #string version , "9" string
-print(selected_id)
-print(type(selected_id))
+matching_product = [p for p in products if str(p["id"]) == str(selected_id)] #p identifies the variable of each item in the list that we have defined as products. return each product dictionary for each prodcut dictionary in our list of products if our product dictoinary id value matches.
+#if say 9 then should return product with id of 9
+print(matching_product)
+print(type(matching_product))
 
-def to_usd(my_price):
-    """
-    Converts a numeric value to usd-formatted string, for printing and display purposes.
-    Source: https://github.com/prof-rossetti/intro-to-python/blob/master/notes/python/datatypes/numbers.md#formatting-as-currency
-    Param: my_price (int or float) like 4000.444444
-    Example: to_usd(4000.444444)
-    Returns: $4,000.44
-    """
-    return f"${my_price:,.2f}" #> $12,000.71
+# def to_usd(my_price):
+#     """
+#    Converts a numeric value to usd-formatted string, for printing and display purposes.
+#     Source: https://github.com/prof-rossetti/intro-to-python/blob/master/notes/python/datatypes/numbers.md#formatting-as-currency
+#     Param: my_price (int or float) like 4000.444444
+#     Example: to_usd(4000.444444)
+#     Returns: $4,000.44
+#     """
+#     return f"${my_price:,.2f}" #> $12,000.71
 
 # TODO: write some Python code here to produce the desired output
 
-print(products)
+#print(products)
