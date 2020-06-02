@@ -27,6 +27,8 @@ products = [
 # info capture/ input
 #
 
+total_price = 0
+
 while True:
     selected_id = input("Please input a product identifier: ") #string version , "9" string
     if selected_id == "DONE":
@@ -35,10 +37,14 @@ while True:
         matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #p identifies the variable of each item in the list that we have defined as products. return each product dictionary for each prodcut dictionary in our list of products if our product dictoinary id value matches.
         #if say 9 then should return product with id of 9
         matching_product = matching_products[0]
+        total_price = total_price + matching_product["price"]
         #print(matching_product)
         #print(type(matching_product))
         print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
 
+# info display/output
+
+print("TOTAL PRICE:" + str(total_price))
 # def to_usd(my_price):
 #     """
 #    Converts a numeric value to usd-formatted string, for printing and display purposes.
