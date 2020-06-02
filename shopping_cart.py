@@ -27,25 +27,74 @@ products = [
 # info capture/ input
 #
 
+print("----------------")
+print("Big Grocery Store Energy")
+print("www.biggrocerystoreenergy.com 718-523-1819")
+print("----------------")
+
+from datetime import datetime
+
+# datetime object containing current date and time
+now = datetime.now()
+ 
+print("now =", now)
+
+# dd/mm/YY H:M:S
+dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+print("CHECKOUT date and time =", "CHECKOUT " + dt_string)	
+
+#print("CHECKOUT")
+
 total_price = 0
+selected_ids = []
 
 while True:
     selected_id = input("Please input a product identifier: ") #string version , "9" string
     if selected_id == "DONE":
         break
     else:
-        matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #p identifies the variable of each item in the list that we have defined as products. return each product dictionary for each prodcut dictionary in our list of products if our product dictoinary id value matches.
-        #if say 9 then should return product with id of 9
-        matching_product = matching_products[0]
-        total_price = total_price + matching_product["price"]
-        #print(matching_product)
-        #print(type(matching_product))
-        print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+        # matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #p identifies the variable of each item in the list that we have defined as products. return each product dictionary for each prodcut dictionary in our list of products if our product dictoinary id value matches.
+        # #if say 9 then should return product with id of 9
+        # matching_product = matching_products[0]
+        # total_price = total_price + matching_product["price"]
+        # #print(matching_product)
+        # #print(type(matching_product))
+        # #print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+        selected_ids.append(selected_id)
 
 # info display/output
+#print(selected_ids)
 
-print("TOTAL PRICE:" + str(total_price))
-# def to_usd(my_price):
+
+for selected_id in selected_ids:
+        matching_products = [p for p in products if str(p["id"]) == str(selected_id)] #p identifies the variable of each item in the list that we have defined as products. return each product dictionary for each prodcut dictionary in our list of products if our product dictoinary id value matches.
+        # if say 9 then should return product with id of 9
+        matching_product = matching_products[0]
+        total_price = total_price + matching_product["price"]
+        # #print(matching_product)
+        # #print(type(matching_product))
+        print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+
+# for total_price in matching_product:
+#     #print(type(product_name))
+#     #print(product_name["name"])
+#     #print(" + " + product_name["name"]
+#     #price_usd = product_name["price"] # "4.99"
+#     total_price = '${0:.2f}'.format(matching_product["price"])
+
+def sales_taxes(total_price):
+    #print(sales_tax)
+    sales_taxes = 1.09 * total_price
+    return taxes
+
+print("TOTAL PRICE:" + '${0:.2f}'.format(total_price))
+print("sales_tax: 1.09 * total_price")
+print("Thank you for shopping here today")
+
+
+
+#def to_usd(total_price)
+    #return f"${total_price:,.2f}" #> $12,000.71
 #     """
 #    Converts a numeric value to usd-formatted string, for printing and display purposes.
 #     Source: https://github.com/prof-rossetti/intro-to-python/blob/master/notes/python/datatypes/numbers.md#formatting-as-currency
@@ -53,7 +102,7 @@ print("TOTAL PRICE:" + str(total_price))
 #     Example: to_usd(4000.444444)
 #     Returns: $4,000.44
 #     """
-#     return f"${my_price:,.2f}" #> $12,000.71
+    
 
 # TODO: write some Python code here to produce the desired output
 
