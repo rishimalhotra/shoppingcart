@@ -82,13 +82,13 @@ for selected_id in selected_ids:
 #     #price_usd = product_name["price"] # "4.99"
 #     total_price = '${0:.2f}'.format(matching_product["price"])
 
-def sales_taxes(total_price):
-    #print(sales_tax)
-    sales_taxes = 1.09 * total_price
-    return sales_taxes
+# def sales_taxes(total_prices):
+#     #print(sales_tax)
+#     sales_taxes = 1.0875 * total_price
+#     return sales_taxes
 
 print("SUBTOTAL:" + '${0:.2f}'.format(total_price))
-print("sales_tax: 1.0875 * total_price")
+#print("Sales Tax:" + '${0:.2f}'.format(sales_taxes))
 print("Thank you for shopping here today")
 
 
