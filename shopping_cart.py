@@ -32,16 +32,16 @@ print("Big Grocery Store Energy")
 print("www.biggrocerystoreenergy.com 718-523-1819")
 print("----------------")
 
+
+#date info below from: https://www.programiz.com/python-programming/datetime/current-time
+
 from datetime import datetime
 
 # datetime object containing current date and time
 now = datetime.now()
- 
-print("now =", now)
-
 # dd/mm/YY H:M:S
-dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-print("CHECKOUT date and time =", "CHECKOUT " + dt_string)	
+dt_string = now.strftime("%m/%d/%Y %H:%M:%S")
+print(" CHECKOUT " + dt_string)	
 
 #print("CHECKOUT")
 
