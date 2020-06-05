@@ -82,13 +82,18 @@ for selected_id in selected_ids:
 #     #price_usd = product_name["price"] # "4.99"
 #     total_price = '${0:.2f}'.format(matching_product["price"])
 
-# def sales_taxes(total_prices):
-#     #print(sales_tax)
-#     sales_taxes = 1.0875 * total_price
-#     return sales_taxes
+def sales_taxes(total_salestax):
+    #print(sales_tax)
+    #sales_taxes = 1.0875 * total_price
+    return total_salestax * 1.0875
+    
+    # total_price = 0
+    # print("THE Sales Tax is:", t, "Amount")
+    # s = sales_taxes(total_price)
+    # print("THE FAHRENHEIT EQUIVALENT IS:", s, "DEGREES")
 
 print("SUBTOTAL:" + '${0:.2f}'.format(total_price))
-#print("Sales Tax:" + '${0:.2f}'.format(sales_taxes))
+print("Sales Tax:" + '${0:.2f}'.format(sales_taxes(total_price))) ##use total_price not total_salestax; function: sending total price, send that value, store in total sales tax. to invoke that, use total price. . only within the function on 88 do we refer to function parameter on 85. number we want to pass in is in the variable total_price
 print("Thank you for shopping here today")
 
 
