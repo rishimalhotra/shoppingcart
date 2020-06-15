@@ -84,8 +84,8 @@ for selected_id in selected_ids:
 
 def sales_taxes(total_salestax):
     #print(sales_tax)
-    #sales_taxes = 1.0875 * total_price
-    return total_salestax * 1.0875
+    sales_taxes = .0875 * total_price
+    return total_salestax * .0875
     
     # total_price = 0
     # print("THE Sales Tax is:", t, "Amount")
