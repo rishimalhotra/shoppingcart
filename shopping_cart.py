@@ -62,6 +62,8 @@ while True:
         # #print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
         selected_ids.append(selected_id)
 
+#if selected_id > 20:
+        #return "This does not exist, please enter a number between 1 and 20"
 # info display/output
 #print(selected_ids)
 
@@ -86,14 +88,21 @@ def sales_taxes(total_salestax):
     #print(sales_tax)
     sales_taxes = .0875 * total_price
     return total_salestax * .0875
+
+# def total_cost(total_allcost):
+#     total_cost = sum(total_price, sales_taxes) #or sales.sales_taxes
+#     return total_allcost
     
     # total_price = 0
     # print("THE Sales Tax is:", t, "Amount")
     # s = sales_taxes(total_price)
     # print("THE FAHRENHEIT EQUIVALENT IS:", s, "DEGREES")
+#s = sum([total_price + sales_taxes(total_price)])
 
-print("SUBTOTAL:" + '${0:.2f}'.format(total_price))
-print("Sales Tax:" + '${0:.2f}'.format(sales_taxes(total_price))) ##use total_price not total_salestax; function: sending total price, send that value, store in total sales tax. to invoke that, use total price. . only within the function on 88 do we refer to function parameter on 85. number we want to pass in is in the variable total_price
+print("SUBTOTAL: " + '${0:.2f}'.format(total_price))
+print("Sales Tax: " + '${0:.2f}'.format(sales_taxes(total_price))) ##use total_price not total_salestax; function: sending total price, send that value, store in total sales tax. to invoke that, use total price. . only within the function on 88 do we refer to function parameter on 85. number we want to pass in is in the variable total_price
+#print("Total: " + s.sum)
+#print("TOTAL:" + '${0:.2f}'.format(total_allcost(total_price)))
 print("Thank you for shopping here today")
 
 
